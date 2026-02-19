@@ -2,6 +2,10 @@
 
 A Java-based Snake game that supports player-controlled and AI-controlled snakes, dynamic and static obstacles and both graphical and text-based interfaces.
 
+<p align="center">
+  <img src="docs/demo.gif" alt="Snake Game Demo" width="600"/>
+</p>
+
 ## 🔎 Overview
 
 The project is an object-oriented Java implementation of the classic Snake game enhanced with AI and dynamic obstacles. The architecture separates game logic, UI and allow modular updates and easy experimentation with game strategies.
