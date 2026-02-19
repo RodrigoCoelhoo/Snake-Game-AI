@@ -8,7 +8,7 @@ import strategy.AStar;
 public class TextGameUI implements IGameUI
 {
 	private SnakeGame game;
-	private final int delay = 1000;
+	private int delay = 1000;
 
 	public TextGameUI()
 	{
@@ -20,6 +20,11 @@ public class TextGameUI implements IGameUI
 	 * @param game 		Represents the game
 	 */
 	public void setGame(SnakeGame game){ this.game = game; }
+
+	@Override
+    public void setDelay(int delay) {
+        this.delay = delay;
+    }
 
 	public int getUpdateDelay() { return delay; }
 

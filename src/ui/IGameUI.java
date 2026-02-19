@@ -8,7 +8,7 @@ public interface IGameUI
      * @param game      Represents the game
      */
     void setGame(SnakeGame game);
-
+    void setDelay(int delay);
     
     void initialize();
 

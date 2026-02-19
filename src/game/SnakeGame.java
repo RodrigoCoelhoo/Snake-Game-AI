@@ -278,18 +278,27 @@ public class SnakeGame
 	 */
 	public void draw(Graphics g)
 	{
-		// Draw the game elements
-		//arena.draw(g, false);
+		int arenaSize = arena.getArenaSize();
+		int hudHeight = 40;
+
+		arena.draw(g);
 		food.draw(g, arena.getRasterizacao());
 		snake.draw(g, arena.getRasterizacao());
 		obstacles.draw(g, arena.getRasterizacao());
-	
-		// Draw the player name and score
+
+		g.setColor(Color.BLACK);
+		g.fillRect(0, arenaSize, arenaSize, hudHeight);
+
 		g.setColor(Color.WHITE);
-		String time = this.time.formatTime();
 		g.setFont(new Font("Arial", Font.PLAIN, 16));
-		g.drawString("Player: " + playerName, 0, 20);
-		g.drawString("Score: " + score, 0, 40);
-		g.drawString("Time: " + time, 0, 60);
+
+		String timeStr = time.formatTime();
+
+		int textY = arenaSize + 25;
+
+		g.drawString("Player: " + playerName, 10, textY);
+		g.drawString("Score: " + score, arenaSize / 2 - 40, textY);
+		g.drawString("Time: " + timeStr, arenaSize - 120, textY);
 	}
+
 }

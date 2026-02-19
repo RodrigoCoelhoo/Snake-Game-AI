@@ -5,7 +5,7 @@ public class GraphicalGameUI implements IGameUI
 {
     private SnakeGame game;
     private GameFrame gameFrame;
-    private final int delay = 100;
+    private int delay = 100;
     
     /** 
      * @param game
@@ -13,6 +13,11 @@ public class GraphicalGameUI implements IGameUI
     @Override
     public void setGame(SnakeGame game) {
         this.game = game;
+    }
+
+    @Override
+    public void setDelay(int delay) {
+        this.delay = delay;
     }
 
     @Override

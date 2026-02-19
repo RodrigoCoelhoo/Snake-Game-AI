@@ -10,7 +10,7 @@ public class GamePanel extends JPanel {
 
     public GamePanel(SnakeGame game) {
         this.game = game;
-        setPreferredSize(new Dimension(game.getArena().getArenaSize(), game.getArena().getArenaSize()));
+        setPreferredSize(new Dimension(game.getArena().getArenaSize(), game.getArena().getArenaSize() + 40));
         setBackground(Color.black);
 
         setFocusable(true);

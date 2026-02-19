@@ -17,6 +17,7 @@ public class Arena
 	private final Tile[][] grid;
 	private final Retangulo arenaBounds;
 	private final boolean rasterizacao;
+	private boolean showHitboxs = true;
 
 	/**
 	 * @param arenaDim			Represents the dimension of the arena in tiles
@@ -213,22 +214,26 @@ public class Arena
 	 * @param g
 	 * @param fill
 	 */
-	public void draw(Graphics g, boolean fill)
+	public void draw(Graphics g)
 	{
 		Tile[][] grid = getGrid();
 
-		for(int i = 0; i < getXUnits(); i++)
-		{
-			for(int j = 0; j < getYUnits(); j++)
+		if(showHitboxs) {
+			for(int i = 0; i < getXUnits(); i++)
 			{
-				g.setColor(Color.pink);
-				if(grid[i][j].getMark().equals(". ")) 
-					g.setColor(Color.gray);
-				
-				if(grid[i][j].isOccupied())
-					grid[i][j].draw(g, fill);
+				for(int j = 0; j < getYUnits(); j++)
+				{
+					g.setColor(Color.pink);
+					if(grid[i][j].getMark().equals(". ")) 
+						g.setColor(Color.gray);
+					
+					if(grid[i][j].isOccupied())
+						grid[i][j].draw(g, false);
+				}
 			}
 		}
+		
+		g.setColor(Color.GRAY);
 		g.drawRect(0, 0, getArenaSize() - 1, getArenaSize() - 1);
 	}	
 
@@ -253,6 +258,7 @@ public class Arena
 	public int getTileSize() { return this.tileSize; }
 	public Tile[][] getGrid() { return this.grid; }
 	public boolean getRasterizacao() { return this.rasterizacao; }
+	public void setShowHitboxs(boolean showHitboxs) { this.showHitboxs = showHitboxs; }
 
 	public class Tile 
 	{
