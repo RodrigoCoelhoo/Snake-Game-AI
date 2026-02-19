@@ -11,7 +11,9 @@ public class Cliente
     public static void main(String[] args)
     {
         IGameUI gameUI = new GraphicalGameUI(); // new TextGameUI();
-        gameUI.setDelay(2000);
+        
+        // If TextGameUI > 1000 for a better experience
+        // gameUI.setDelay(200);
         
         SnakeGame snakeGame = new SnakeGame(
             36, 
