@@ -1,0 +1,3 @@
+# Ignore the Javadoc HTML files for language stats
+docs/** linguist-vendored
+*.html linguist-vendored
