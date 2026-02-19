@@ -1,0 +1,4 @@
+Class name	Constructor Argument		isDynamic	Point of rotation	Angle of rotation
+Triangulo	100 100 222 100 150 195	false	null	0
+Poligono	800 500 900 500 900 600 800 600	false	900 500	25
+Poligono	450 300 500 400 600 450 500 500 450 600 400 500 300 450 400 400	true	null	15

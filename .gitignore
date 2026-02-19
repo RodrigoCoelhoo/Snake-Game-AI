@@ -1,0 +1,12 @@
+# Ignore compiled Java classes
+/bin/
+/*.class
+
+# Ignore IDE files
+/.idea/
+/*.iml
+/.vscode/
+
+# Ignore OS files
+Thumbs.db
+.DS_Store
